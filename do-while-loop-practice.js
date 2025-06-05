@@ -2,8 +2,9 @@ const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay',
 
 const admitted = document.querySelector('.admitted');
 const refused = document.querySelector('.refused');
-admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: ';
+
+let resultAdmit = '';
+let resultRefuse = '';
 
 let i = 0;
 
@@ -11,14 +12,23 @@ do {
 
     if (people[i] === 'Lola' || people[i] === 'Phil') {
 
-        refused.textContent += people[i] + ', ';
+        resultRefuse += people[i] + ', ';
 
     } else {
 
-        admitted.textContent += people[i] + ', ';
+        resultAdmit += people[i] + ', ';
 
     }
 
     i++;
 
 } while (i < people.length);
+
+
+
+const finalAdmit = resultAdmit.slice(0, resultAdmit.length - 2) + '.';
+const finalRefuse = resultRefuse.slice(0, resultRefuse.length - 2) + '.';
+
+
+admitted.textContent = 'Admitted: ' + finalAdmit;
+refused.textContent = 'Refused: ' + finalRefuse;
