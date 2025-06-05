@@ -1,0 +1,1 @@
+This is just a practice to refresh or basically because I am lazy and I just follow the online video saying you need to at least code everday. Hehe.
