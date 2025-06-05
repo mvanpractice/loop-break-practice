@@ -1,6 +1,5 @@
 
 const output = document.querySelector('.output');
-output.appendChild(parag);
 
 let i = 10; 
 
@@ -21,6 +20,8 @@ while(i >= 0) {
         parag.textContent = i;
 
     }
+    
+    output.appendChild(parag);
 
     i--;
 }
